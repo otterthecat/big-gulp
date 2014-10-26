@@ -6,5 +6,9 @@ module.exports = {
 		halstead        : 10,
 		maintainability : 90,
 		trycatch        : true
+	},
+
+	mocha: {
+		reporter: 'min'
 	}
 };

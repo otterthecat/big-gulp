@@ -13,3 +13,8 @@ chai.use(sinonChai);
 
 // modules to test
 // /////////////////////////////////////////////////////////
+describe('Test', function () {
+	it('should be true', function () {
+		'test'.should.be.a('string');
+	});
+});

@@ -4,6 +4,7 @@ module.exports = {
 
 	app: ['./client/app.js'],
 
-	less: ['./less/*.less']
+	less: ['./less/*.less'],
 
+	test: ['./test/specs/*.js']
 };
