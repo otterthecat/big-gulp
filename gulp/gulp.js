@@ -6,7 +6,8 @@ var files = fs.readdirSync('./gulp/tasks/');
 	files.forEach(function (file) {
 		'use strict';
 		var fileName = file.substr(0, file.length - 3);
-		gulp.task(fileName, require('./tasks/' + fileName));
+		var taskName = fileName.replace('-', ':');
+		gulp.task(taskName, require('./tasks/' + fileName));
 	});
 
 module.exports = gulp;
