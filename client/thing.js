@@ -1,4 +1,6 @@
 module.exports = function (str){
 	'use strict';
-	 return console.log('Your lovely string is ' + str);
+	var thing = 'Your lovely string is ' + str;
+	 console.log(thing);
+	 return thing;
 };

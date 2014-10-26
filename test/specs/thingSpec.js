@@ -13,8 +13,11 @@ chai.use(sinonChai);
 
 // modules to test
 // /////////////////////////////////////////////////////////
-describe('Test', function () {
-	it('should be true', function () {
-		'test'.should.be.a('string');
+var thing = require('../../client/thing');
+
+describe('Thing', function () {
+	it('should set string', function () {
+		var item = thing('boom');
+		item.should.equal('Your lovely string is boom');
 	});
 });

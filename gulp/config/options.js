@@ -8,6 +8,13 @@ module.exports = {
 		trycatch        : true
 	},
 
+	istanbul: {
+		dest: './metrics/coverage',
+		reporters: {
+			test: ['text-summary']
+		}
+	},
+
 	mocha: {
 		reporter: 'min'
 	}
