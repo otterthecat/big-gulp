@@ -18,8 +18,17 @@ Colors
 @info_color: darken(@primary_color_dark, 10%);
 
 
+body {
+	background-color: @info_color;
+	color: @support_color_light;
+}
+
 h1 {
-	color: @primary_color;
+	color: @alert_color;
+}
+
+h1:before{
+	content: 'bar';
 }
 
 h2 {

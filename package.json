@@ -14,6 +14,7 @@
     "url": "https://github.com/otterthecat/big-gulp.git"
   },
   "devDependencies": {
+    "browser-sync": "^1.6.0",
     "browserify": "*",
     "chai": "^1.9.1",
     "gulp": "^3.8.5",

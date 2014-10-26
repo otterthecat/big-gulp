@@ -1,4 +1,2 @@
-module.exports = function (str){
-	'use strict';
-	console.log('your string is ' + str);
-};
+var thing = require('./thing');
+thing('hoo-rah!');

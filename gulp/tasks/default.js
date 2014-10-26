@@ -1,4 +1,6 @@
 module.exports = [
+	'browserSync',
 	'browserify',
-	'less'
+	'less',
+	'watch'
 ];
