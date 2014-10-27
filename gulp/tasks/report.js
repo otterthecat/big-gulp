@@ -1,5 +1,6 @@
 module.exports = [
-	'sloc',
 	'mocha:istanbul:report',
-	'plato'
+	'plato',
+	'size',
+	'sloc',
 ]
