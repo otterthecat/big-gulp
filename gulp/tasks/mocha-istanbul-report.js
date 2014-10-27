@@ -12,7 +12,7 @@ module.exports = function (callback) {
 		.on('finish', function () {
 			gulp.src(sources.test)
 				.pipe(mocha())
-				.pipe(istanbul.writeReports(options.dest))
+				.pipe(istanbul.writeReports(options))
 				.on('end', callback);
 		});
 };

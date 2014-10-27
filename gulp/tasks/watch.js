@@ -3,5 +3,8 @@ var sources = require('../config/sources');
 var browserSync = require('browser-sync');
 
 module.exports = function () {
-	gulp.watch([sources.js, sources.less], ['browserify', 'less', browserSync.reload]);
+	return gulp.watch(
+				[sources.js, sources.less],
+				['browserify', 'less', browserSync.reload]
+			);
 };

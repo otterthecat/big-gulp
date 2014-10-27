@@ -6,6 +6,6 @@ var options = require('../config/options').complexity;
 module.exports = function () {
 	'use strict';
 
-	gulp.src(sources)
-		.pipe(complexity(options));
+	return gulp.src(sources)
+				.pipe(complexity(options));
 };

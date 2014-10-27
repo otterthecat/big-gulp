@@ -7,14 +7,12 @@ var options = require('../config/options').istanbul;
 module.exports = function (callback) {
 	'use strict';
 
-	gulp.src(sources.js)
-		.pipe(istanbul())
-		.on('finish', function () {
-			gulp.src(sources.test)
-				.pipe(mocha())
-				.pipe(istanbul.writeReports({
-					reporters : options.reporters.test
-				}))
-				.on('end', callback);
-		});
+	return gulp.src(sources.js)
+			.pipe(istanbul())
+			.on('finish', function () {
+				gulp.src(sources.test)
+					.pipe(mocha())
+					.pipe(istanbul.writeReports(options))
+					.on('end', callback);
+			});
 };

@@ -23,13 +23,16 @@ module.exports = {
 	complexity: complexityOpts,
 
 	istanbul: {
-		dest: './metrics/coverage',
-		reporters: {
-			test: ['text-summary']
-		}
+		dir: './metrics/coverage',
+		reporters: ['text-summary', 'html']
 	},
 
 	mocha: {
 		reporter: 'min'
+	},
+
+	size: {
+		showFiles: true,
+		title: 'File Size: '
 	}
 };
