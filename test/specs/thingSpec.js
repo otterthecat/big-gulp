@@ -16,6 +16,8 @@ chai.use(sinonChai);
 var thing = require('../../client/thing');
 
 describe('Thing', function () {
+	'use strict';
+
 	it('should set string', function () {
 		var item = thing('boom');
 		item.should.equal('Your lovely string is boom');

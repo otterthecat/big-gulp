@@ -1,6 +1,8 @@
 module.exports = [
 	'browserSync',
+	'jscs',
+	'jshint',
 	'browserify',
 	'less',
-	'watch'
+	'report'
 ];
