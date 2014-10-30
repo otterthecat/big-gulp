@@ -6,5 +6,11 @@ module.exports = {
 
 	less: ['./less/*.less'],
 
-	test: ['./test/specs/**/*.js']
+	test: ['./test/specs/**/*.js'],
+
+	public: {
+		js: ['./public/javascript/**/*.js'],
+		css: ['./public/stylesheets/**/*.css'],
+		html: ['./public/**/*.html']
+	}
 };
