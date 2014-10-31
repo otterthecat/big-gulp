@@ -8,6 +8,8 @@ module.exports = {
 
 	test: ['./test/specs/**/*.js'],
 
+	json: ['./docs/raw/*.json'],
+
 	public: {
 		js: ['./public/javascript/**/*.js'],
 		css: ['./public/stylesheets/**/*.css'],

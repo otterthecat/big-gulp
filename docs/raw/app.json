@@ -1,0 +1,26 @@
+[
+  {
+    "tags": [
+      {
+        "type": "type",
+        "types": [
+          "object"
+        ]
+      }
+    ],
+    "description": {
+      "full": "<p>Make use of things</p>",
+      "summary": "<p>Make use of things</p>",
+      "body": ""
+    },
+    "isPrivate": false,
+    "ignore": false,
+    "code": "var app = require('./thing');\napp('hoo-rah!');",
+    "ctx": {
+      "type": "declaration",
+      "name": "app",
+      "value": "require('./thing')",
+      "string": "app"
+    }
+  }
+]

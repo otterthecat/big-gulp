@@ -1,2 +1,6 @@
-var thing = require('./thing');
-thing('hoo-rah!');
+/**
+ * Make use of things
+ * @type {Object}
+ */
+var app = require('./thing');
+app('hoo-rah!');

@@ -1,0 +1,34 @@
+[
+  {
+    "tags": [
+      {
+        "type": "param",
+        "types": [
+          "string"
+        ],
+        "name": "str",
+        "description": "[user defined string to be appeneded to return value]"
+      },
+      {
+        "type": "return",
+        "types": [
+          "string"
+        ],
+        "description": "[full concated string]"
+      }
+    ],
+    "description": {
+      "full": "<p>Logs &amp; returns generated string</p>",
+      "summary": "<p>Logs &amp; returns generated string</p>",
+      "body": ""
+    },
+    "isPrivate": false,
+    "ignore": false,
+    "code": "var thing = function (str){\n\t'use strict';\n\n\tvar thing = 'Your lovely string is ' + str;\n\tconsole.log(thing);\n\treturn thing;\n};\n\nmodule.exports = thing;",
+    "ctx": {
+      "type": "function",
+      "name": "thing",
+      "string": "thing()"
+    }
+  }
+]
