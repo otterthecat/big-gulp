@@ -21,7 +21,6 @@
     "gulp-bump": "^0.1.10",
     "gulp-chmod": "^1.2.0",
     "gulp-complexity": "^0.2.1",
-    "gulp-data": "^1.0.2",
     "gulp-dox": "0.0.1",
     "gulp-istanbul": "^0.2.0",
     "gulp-jade": "^0.9.0",

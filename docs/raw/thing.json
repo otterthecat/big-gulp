@@ -18,17 +18,77 @@
       }
     ],
     "description": {
-      "full": "<p>Logs &amp; returns generated string</p>",
-      "summary": "<p>Logs &amp; returns generated string</p>",
+      "full": "<p>@module thing<br />Logs &amp; returns generated string</p>",
+      "summary": "<p>@module thing<br />Logs &amp; returns generated string</p>",
       "body": ""
     },
     "isPrivate": false,
     "ignore": false,
-    "code": "var thing = function (str){\n\t'use strict';\n\n\tvar thing = 'Your lovely string is ' + str;\n\tconsole.log(thing);\n\treturn thing;\n};\n\nmodule.exports = thing;",
+    "code": "var Thing = function (str){\n\t'use strict';\n\n\tvar thing = 'Your lovely string is ' + str;\n\tconsole.log(thing);\n\treturn thing;\n};",
     "ctx": {
       "type": "function",
-      "name": "thing",
-      "string": "thing()"
+      "name": "Thing",
+      "string": "Thing()"
+    }
+  },
+  {
+    "tags": [
+      {
+        "type": "param",
+        "types": [
+          "number"
+        ],
+        "name": "num1",
+        "description": "A Number"
+      },
+      {
+        "type": "param",
+        "types": [
+          "number"
+        ],
+        "name": "num2",
+        "description": "A Number"
+      },
+      {
+        "type": "return",
+        "types": [
+          "number"
+        ],
+        "description": "value of num1 * num2"
+      }
+    ],
+    "description": {
+      "full": "<p>Takes 2 numbers and multiplies the first against the second.</p>",
+      "summary": "<p>Takes 2 numbers and multiplies the first against the second.</p>",
+      "body": ""
+    },
+    "isPrivate": false,
+    "ignore": false,
+    "code": "Thing.prototype.stuff = function (num1, num2){\n\n\treturn num1 * num2;\n};",
+    "ctx": {
+      "type": "method",
+      "constructor": "Thing",
+      "cons": "Thing",
+      "name": "stuff",
+      "string": "Thing.prototype.stuff()"
+    }
+  },
+  {
+    "tags": [],
+    "description": {
+      "full": "<p>export new instance of constructor</p>",
+      "summary": "<p>export new instance of constructor</p>",
+      "body": ""
+    },
+    "isPrivate": false,
+    "ignore": false,
+    "code": "module.exports = new Thing();",
+    "ctx": {
+      "type": "property",
+      "receiver": "module",
+      "name": "exports",
+      "value": "new Thing()",
+      "string": "module.exports"
     }
   }
 ]

@@ -3,9 +3,13 @@ html
 	head
 
 	body
-		each item in locals
+		h1= locals.current
+		ul
+			each d in locals.files
+				li= d + '.html'
+		each item in locals.docs
 			div!= item.description.full
 			ul
 				each t in item.tags
-					li= t.type + ' : ' + t.description
+					li= t.type + ' ' + t.types + ' : ' + t.description
 			pre= item.code
