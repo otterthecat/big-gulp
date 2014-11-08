@@ -14,5 +14,10 @@ module.exports = {
 		js: ['./public/javascript/**/*.js'],
 		css: ['./public/stylesheets/**/*.css'],
 		html: ['./public/**/*.html']
+	},
+
+	documentation: {
+		template: './templates/doc.html',
+		data: './docs/raw/'
 	}
 };

@@ -3,7 +3,7 @@ var dox = require('gulp-dox');
 var jade = require('gulp-jade');
 var rename = require('gulp-rename');
 var fs = require('fs');
-var sources = require('../config/sources').js;
+var sources = require('../config/sources');
 
 var stripNames = function(list){
 	for(var i = 0; i < list.length; i += 1){
@@ -13,19 +13,19 @@ var stripNames = function(list){
 };
 
 module.exports = function (){
-	gulp.src(sources)
+	gulp.src(sources.js)
 		.pipe(dox())
-		.pipe(gulp.dest('./docs/raw'))
+		.pipe(gulp.dest(sources.documentation.data))
 		.on('finish', function (){
-			fs.readdir('./docs/raw/', function (err, docs){
+			fs.readdir(sources.documentation.data, function (err, docs){
 				docs.forEach(function (jsn){
 					jsn = jsn.replace('.json', '');
-					gulp.src('./templates/doc.html')
+					gulp.src(sources.documentation.template)
 					.pipe(rename(jsn +'.html'))
 					.pipe(jade({
 					    locals: {
 					    	current: jsn,
-					    	docs: require('../../docs/raw/' + jsn),
+					    	docs: require('../../' + sources.documentation.data + jsn),
 					    	files: stripNames(docs)
 					    }
 					}))
