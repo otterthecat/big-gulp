@@ -6,10 +6,12 @@ html
 		h1= locals.current
 		ul
 			each d in locals.files
-				li= d + '.html'
+				li
+					a(href= d+'.html')= d
 		each item in locals.docs
 			div!= item.description.full
 			ul
 				each t in item.tags
 					li= t.type + ' ' + t.types + ' : ' + t.description
-			pre= item.code
+			code
+				pre= item.code

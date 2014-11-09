@@ -1,0 +1,10 @@
+<!DOCTYPE html><html><head></head><body><h1>thing</h1><ul><li><a href="app.html">app</a></li><li><a href="thing.html">thing</a></li></ul><div><p>@module thing<br />Logs &amp; returns generated string</p></div><ul><li>param string : [user defined string to be appeneded to return value]</li><li>return string : [full concated string]</li></ul><code><pre>var Thing = function (str){
+	'use strict';
+
+	var thing = 'Your lovely string is ' + str;
+	console.log(thing);
+	return thing;
+};</pre></code><div><p>Takes 2 numbers and multiplies the first against the second.</p></div><ul><li>param number : A Number</li><li>param number : A Number</li><li>return number : value of num1 * num2</li></ul><code><pre>Thing.prototype.stuff = function (num1, num2){
+
+	return num1 * num2;
+};</pre></code><div><p>export new instance of constructor</p></div><ul></ul><code><pre>module.exports = new Thing();</pre></code></body></html>

@@ -23,14 +23,22 @@ module.exports = function (){
 					gulp.src(sources.documentation.template)
 					.pipe(rename(jsn +'.html'))
 					.pipe(jade({
-					    locals: {
-					    	current: jsn,
-					    	docs: require('../../' + sources.documentation.data + jsn),
-					    	files: stripNames(docs)
-					    }
+						locals: {
+							current: jsn,
+							docs: require('../../' + sources.documentation.data + jsn),
+							files: stripNames(docs)
+						}
 					}))
-					.pipe(gulp.dest('./docs/html/' + jsn));
+					.pipe(gulp.dest('./docs/html/pages/'));
 				});
+				// add index page
+				gulp.src(sources.documentation.index)
+					.pipe(jade({
+						locals: {
+							pages: docs
+						}
+					}))
+					.pipe(gulp.dest('./docs/html/'));
 			});
 		});
 };

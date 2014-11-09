@@ -17,6 +17,7 @@ module.exports = {
 	},
 
 	documentation: {
+		index: './templates/index.html',
 		template: './templates/doc.html',
 		data: './docs/raw/'
 	}
