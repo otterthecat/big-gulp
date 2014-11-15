@@ -1,9 +1,15 @@
 var gulp = require('gulp');
 var sources = require('../config/sources');
+var browserSync = require('browser-sync');
 
 module.exports = function () {
+
+	browserSync({
+		proxy: 'localhost/github/big-gulp/public'
+	});
+
 	return gulp.watch(
 			[sources.js, sources.test, sources.less],
-			['jshint', 'jscs', 'mocha', 'browserify', 'less']
+			['jshint', 'jscs', 'mocha', 'browserify', 'less', browserSync.reload]
 		);
 };
