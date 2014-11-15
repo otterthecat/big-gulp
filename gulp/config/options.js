@@ -10,6 +10,10 @@ var complexityOpts = {
 
 module.exports = {
 
+	browserSync: {
+		proxy: 'localhost/github/big-gulp/public'
+	},
+
 	plato: {
 		dest: './metrics/report',
 		complexity: complexityOpts,

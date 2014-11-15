@@ -1,11 +1,12 @@
 var gulp = require('gulp');
 var sources = require('../config/sources');
+var options = require('../config/options');
 var browserSync = require('browser-sync');
 
 module.exports = function () {
 
 	browserSync({
-		proxy: 'localhost/github/big-gulp/public'
+		proxy: options.browserSync.proxy
 	});
 
 	return gulp.watch(
