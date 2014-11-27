@@ -1,6 +1,6 @@
 module.exports = {
 
-	js: ['./client/**/*.js'],
+	js: ['./gulp/tasks/*.js','./client/**/*.js'],
 
 	app: ['./client/app.js'],
 
