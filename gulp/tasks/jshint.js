@@ -17,5 +17,6 @@ module.exports = function () {
 
 	return gulp.src(sources)
 		.pipe(jshint())
-		.pipe(jshint.reporter(stylish));
+		.pipe(jshint.reporter(stylish))
+		.pipe(jshint.reporter('fail'));
 };

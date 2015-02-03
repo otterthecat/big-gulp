@@ -15,5 +15,6 @@ module.exports = function () {
 	'use strict';
 
 	return gulp.src(sources)
-			.pipe(jscs());
+			.pipe(jscs())
+			.pipe(jscs.reporter('fail'));
 };
